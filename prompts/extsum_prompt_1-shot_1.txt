@@ -1,0 +1,36 @@
+Create an extractive summary with the 3-5 most important sentences of the following dialogue and number the sentences in order of appearance. 
+It is extremely important that you don't output more than 5 sentences. 
+It is extremely important that you copy the sentences from the dialogue without changes.
+
+For example:
+Dialogue 1:
+Customer: @hulu_support My watchlist is not updating with new episodes (past couple days).
+Customer: Any idea why?
+Agent: @658975 Apologies for the trouble, Norlene!
+Agent: We're looking into this.
+Agent: In the meantime, try navigating to the season / episode manually.
+Customer: @hulu_support Tried logging out/back in, that didn’t help
+Agent: @658975 Sorry!
+Agent: 😔 We assure you that our team is working hard to investigate, and we hope to have a fix ready soon!
+Customer: @hulu_support Thank you!
+Customer: Some shows updated overnight, but others did not...
+Agent: @658975 We definitely understand, Norlene.
+Agent: For now, we recommend checking the show page for these shows as the new eps will be there
+Customer: @hulu_support As of this morning, the problem seems to be resolved.
+Customer: Watchlist updated overnight with all new episodes.
+Customer: Thank you for your attention to this matter!
+Customer: I love Hulu 💚
+Agent: @658975 Awesome!
+Agent: That's what we love to hear.
+Agent: If you happen to need anything else, we'll be here to support!
+Agent: 💚
+
+Extractive Summary 1:
+1.- Customer:\tSo neither my iPhone nor my Apple Watch are recording my steps/activity, and Health doesn’t recognise either source anymore for some reason.
+2.- Agent:\tHave you tried restarting both devices since this started happening?
+3.- Customer:\t@AppleSupport Yes, everything seems fine, it’s just Health and activity.
+4.- Agent:\t@135060 Let’s move to DM and look into this a bit more.
+
+The following is the dialog you should consider:
+
+Dialogue 2:

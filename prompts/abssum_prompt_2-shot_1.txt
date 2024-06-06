@@ -1,0 +1,29 @@
+Based on the extractive summary you just created, and the numbers you assigned to each sentence, create an abstractive summary (in your own words) of the dialogue. Each sentence of the abstractive summary will have exactly one of the tags described below. Also, each sentence should have a list of integers referencing to the extractive summaries' lines that support that sentence. 
+When you finish the task, write -End of Response-
+TAG DEFINITIONS:
+Customer:
+1.	ISSUE: A problem the customer called for
+2.	FEEDBACK: transmission of evaluative or corrective information about a product or process given by the client
+3.  QUESTION: Either a request for information or corrective information about a product or process given by the client.
+Agent:
+4.	RESOLUTION: Agent’s action where the customer’s issue is directly resolved.
+5.	RESOLUTION STEP: Agent’s action that takes a step towards a RESOLUTION 
+6.	DEFLECTION: Agent’s action to redirect the issue into another platform (either direct messaging, email or calling the same or another agent)
+7.	WORKAROUND: Agent’s suggestion that deals with a problem without completely solving it
+
+Example Task:
+
+Extractive Summary:
+1.- Customer:\tSo neither my iPhone nor my Apple Watch are recording my steps/activity, and Health doesn’t recognise either source anymore for some reason.
+2.- Agent:\tHave you tried restarting both devices since this started happening?
+3.- Customer:\t@AppleSupport Yes, everything seems fine, it’s just Health and activity.
+4.- Agent:\t@135060 Let’s move to DM and look into this a bit more.
+
+Abstractive Summary with References and Tags:
+The customer reported that the health and activity functions are not working with the smartwatch and phone {1} {ISSUE}
+The agent suggested to restart both devices {2} {RESOLUTION STEP}
+The agent offers to move to DM to look into the details of the issue {4} {DEFLECTION}
+
+Your Task:
+
+Extractive Summary:

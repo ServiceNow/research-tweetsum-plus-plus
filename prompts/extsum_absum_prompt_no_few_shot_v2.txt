@@ -1,0 +1,8 @@
+Create an extractive summary with the 3-5 most important sentences of the following dialogue and number the sentences in order of appearance. 
+Then, based on the extractive summary you just created, and the numbers you assigned to each sentence, create an abstractive summary (in your own words) of the dialogue. Each sentence of the abstractive summary will have exactly one of the tags (ISSUE, FEEDBACK, QUESTION, RESOLUTION, RESOLUTION STEP, DEFLECTION, WORKAROUND). Also, each sentence should have a list of integers referencing to the extractive summaries' lines that support that sentence. 
+When you finish the task, write -End of Response-
+IT IS VERY IMPORTANT THAT YOU DO NOT WRITE MORE THAN 5 SENTENCES IN THE EXTRACTIVE SUMMARY. ONLY SELECT THE MOST IMPORTANT ONES.
+
+Your Task:
+
+Original Dialogue:

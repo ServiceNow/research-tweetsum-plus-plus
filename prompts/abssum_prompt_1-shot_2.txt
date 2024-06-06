@@ -1,0 +1,23 @@
+Based on the extractive summary you just created, and the numbers you assigned to each sentence, create an abstractive summary (in your own words) of the dialogue. Each sentence of the abstractive summary will have exactly one of the tags described below. Also, each sentence should have a list of integers referencing to the extractive summaries' lines that support that sentence. 
+TAG DEFINITIONS:
+Customer:
+1.	ISSUE: A problem the customer called for
+2.	FEEDBACK: transmission of evaluative or corrective information about a product or process given by the client
+3.  QUESTION: Either a request for information or corrective information about a product or process given by the client.
+Agent:
+4.	RESOLUTION: Agent’s action where the customer’s issue is directly resolved.
+5.	RESOLUTION STEP: Agent’s action that takes a step towards a RESOLUTION 
+6.	DEFLECTION: Agent’s action to redirect the issue into another platform (either direct messaging, email or calling the same or another agent)
+7.	WORKAROUND: Agent’s suggestion that deals with a problem without completely solving it
+
+For example:
+Extractive Summary 1:
+Customer:\t@AskAmex Where do I write to address a customer service issue to higher management?
+Agent:\tWhich U.S. based card is this concerning?
+Customer:\t@AskAmex Signed up for new card with Delta to book immediately book tix.
+Agent:\tPlease call our New Accounts Team at 877-399-3086, for assistance.
+
+Abstractive Summary 1 with References and Tags:
+The customer asked where to report an issue to higher management {1} {ISSUE}
+Agent asked which card is was the issue about {2} {RESOLUTION STEP}
+Agent gave the phone number of the New Account Team {4} {RESOLUTION}

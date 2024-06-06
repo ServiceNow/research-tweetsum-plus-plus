@@ -1,0 +1,103 @@
+mode: abstractive
+model_name_or_path: bert-base-uncased #allenai/led-base-16384 #bert-base-uncased
+decoder_model_name_or_path: bert-base-uncased #allenai/led-base-16384 #bert-base-uncased
+cache_file_path: data
+max_epochs: 4
+do_train: true
+do_test: true
+batch_size: 4
+weights_save_path: model_weights
+no_wandb_logger_log_model: true
+accumulate_grad_batches: 5
+use_scheduler: linear
+warmup_steps: 8000
+gradient_clip_val: 1.0
+custom_checkpoint_every_n: 300
+adam_epsilon: 1e-08
+amp_level: O1
+auto_scale_batch_size: None
+classifier: simple_linear
+classifier_dropout: 0.1
+classifier_transformer_num_layers: 2
+create_token_type_ids: binary
+data_path: ./pt/bert-base-uncased
+data_type: txt #abstractive
+dataset_version: 3.0.0
+data_example_column: article
+data_summarized_column: highlights
+default_root_dir: None
+gen_max_len: 100
+gpus: -1
+gradient_checkpointing: false
+label_smoothing: 0.0
+learning_rate: 2e-05
+load_from_checkpoint: false
+load_weights: true
+logLevel: INFO
+loss_key: loss_avg_seq_mean
+max_seq_length: 0
+min_epochs: 1
+min_steps: None
+model_type: bert
+nlp_cache_dir: /home/toolkit/src_ssh/research-fact-summ/data
+no_test_block_trigrams: false
+no_use_token_type_ids: false
+no_prepare_data: false
+num_frozen_steps: 0
+num_sanity_val_steps: 5
+num_threads: 4
+only_preprocess: false
+optimizer_type: adamw
+overfit_pct: 0.0
+pooling_mode: sent_rep_tokens
+precision: 32
+preprocess_resume: false
+processing_num_threads: 2
+processor_no_bert_compatible_cls: true
+profiler: false
+progress_bar_refresh_rate: 50
+# plugins: deepspeed:/home/toolkit/src_ssh/research-fact-summ/factsumm/models/example_deepspeed_config.json #None
+ranger_k: 6
+resume_from_checkpoint: /home/toolkit/models/bert-base-uncased/epoch3.ckpt #/home/toolkit/models/bertsumextabs_cnndm_final_model/model_step_148000.pt #/home/toolkit/models/bert-base-uncased/epoch3.ckpt #/content/drive/My Drive/TransformerExtSum Data/CNN-DM/models/epoch=2.ckpt
+seed: None
+split_char: \n
+test_id_method: top_k
+test_k: 3
+test_name: test
+test_percent_check: 0.01 #1.0
+test_use_pyrouge: false
+tie_encoder_decoder: false
+tokenizer_name: 
+tokenizer_no_use_fast: false
+train_name: train
+train_percent_check: 1.0
+use_logger: true
+use_custom_checkpoint_callback: false
+use_percentage_of_data: 0.01 #1.0
+val_name: val
+val_percent_check: 0.01 #1.0
+weight_decay: 0.01
+do_predict: true #false #false #true
+predictions_path: /mnt/colab_public/gebelangsn/factsumm/outputs/predicted_summaries_mixtral_2024-02-28_20-55-29.csv #predicted_summaries_gpt-4_2024-02-23_17-05-39.csv #gpt4 predicted_summaries_gpt-4_2024-02-23_17-05-39.csv # gpt3.5 predicted_summaries_gpt-3.5-turbo-1106_2024-02-23_16-48-11.csv
+num_examples_to_evaluate: 110  # 34 # 2
+num_examples_to_train: 301
+hf_dataset_format: true #false #true
+checkpoint_path: /mnt/colab_public/data/gebelangsn/factsumm/runs/citeXtral_tweetsumm++_v1_995c75d6d0eca4d24d704a53e258e27d-tweetsum-finetune-mixtral_extabs_prompt/checkpoint-400
+extsum_absum_1_call: false 
+max_steps: 300
+logging_steps: 100
+eval_steps: 100
+save_steps: 5
+# base_model_id: mistralai/Mixtral-8x7B-v0.1
+base_data_path_local: /mnt/colab_public/gebelangsn/factsumm
+base_data_path_remote: /mnt/colab_public/data/gebelangsn/factsumm
+local_run: false
+skip_training: true
+oracle_extsum: false
+per_device_train_batch_size: 1
+model_max_length: 2000
+dataset: tweetsum++_v1
+max_new_tokens: 450
+unlabeled_examples_to_consider: 1
+self_labeled_examples_for_training: 1
+num_cycles: 1
